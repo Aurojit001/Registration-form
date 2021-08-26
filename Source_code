@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/final.css">
+        <script type="text/javascript">
+        function validateForm()
+        {
+            var pass1 = document.getElementById("password1").value;
+            var pass2 = document.getElementById("Password2").value;
+
+            if (pass1 == pass2)
+            {
+                alert("password match");
+                return true;
+            }
+            else
+            {
+                alert("passwords do not match");
+                return false;
+            }
+            
+        }
+        </script>
+    </head>
+    <body>
+        <h1>This is a Registration form</h1>
+        <div id="registration-form">
+            <form action="mysubmitpage.html" onsubmit="return validateForm();">
+                <label for="first-name">First Name:</label>
+                <input type="text" name="first-name" placeholder="First name" required><br>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" name="last-name" placeholder="Last name" required><br>
+
+                <div>
+                    <label for="gender-male">Male</label>
+                    <input type="radio" name="gender-choice" value="choice-1">
+
+                    <label for="gender-female">Female</label>
+                    <input type="radio" name="gender-choice" value="choice-2">
+
+                    <label for="gender-others">Others</label>
+                    <input type="radio" name="gender-choice" value="choice-3">
+                </div>
+
+                <div>
+                    <label for="gmail">Gmail</label>
+                    <input type="email" name="gmail" placeholder="xyz@gmail.com"><br>
+
+                    <label for="password1">Password1</label>
+                    <input type="password" id="password1"><br>
+
+                    <label for="password2">Password2</label>
+                    <input type="password" id="password2"><br>
+
+                </div>
+
+                <div>
+                    <label><b>Enter your contact number</b></label>
+                    <input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                </div>
+
+                <div>
+                    <label for="Month">Birthdate</label>
+                    <select name="Month">
+                        <option value="0" selected disabled>Month</option>
+                        <option value="January">January</option>
+                        <option value="Febryary">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <optiop value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+                <hr>
+                    <img src="images/winner.jpg" height="400px" width="500px" alt="Image">
+
+            </form>
+        </div>
+    </body>
+</html>
